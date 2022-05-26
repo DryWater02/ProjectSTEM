@@ -1,0 +1,66 @@
+import random
+number1 = random.randint(1,100)
+number2 = random.randint(1,100)
+number3 = random.randint(1,100)
+number4 = random.randint(1,100)
+number5 = random.randint(1,100)
+largest = max(number1, number2, number3, number4, number5)
+print("The largest number out of the 5 variables is " + str(largest) + "\n")
+
+if (number1 > number5):
+    print("The 1st number is greater than the 5th number\n")
+else:
+    print("The 1st number is less than the 5th number\n")
+
+if (not number3 > number2 and number3 > number5):
+    print("The 3rd number is not less than the 2nd and 5th numbers\n")
+else:
+    print("The 3rd number is less then the 2nd and 5th numbers\n")
+
+if (number2 > number1 or number2 > number3):
+    print("The 2nd number is either greater than the 1st or 3rd number\n")
+else:
+    print("The 2nd number is neither greater than the 1st and 3rd \nnumbers\n")
+
+if (number4 <= number2):
+    print("The 4th number is less then or equal to the 2nd number\n")
+else:
+    print("The 4th number is more than the 2nd number\n")
+    
+if (number1 >= number3 and number3 <= number4):
+    print("The 3rd number is greater than the 1st number but less \nthen the 4th number\n")
+else:
+    print("The 3rd number is either less than the 1st number or \ngreater than the 4th number.\n")
+
+if (number5 - number3 > number4):
+    print("The difference between the 5th and 3rd numbers is more \nthan the 4th number\n")
+else:
+    print("The difference between the 5th and 3rd numbers is less \nthan the 4th number\n")
+print("*input either \'1\' \'2\' \'3\' \'4\' or \'5\'")
+suffer = input("Which variable has the lowest value? ")
+
+
+if (number1 < number2 and number1 < number3 and number1 < number4 and number1 < number5):
+    answer = "1"
+elif(number2 < number1 and number2 < number3 and number2 < number4 and number2 < number5):
+    answer = "2"
+elif(number3 < number1 and number3 < number2 and number3 < number4 and number3 < number5):
+    answer = "3"
+elif(number4 < number1 and number4 < number3 and number4 < number3 and number4 < number5):
+    answer = "4"
+elif(number5 < number1 and number5 < number2 and number5 < number3 and number5 < number4):
+    answer = "5"
+if(suffer == answer):
+    print("Correct, the variable is with the lowest value is \nnumber " + answer + "!")
+    print(str(number1))
+    print(str(number2))
+    print(str(number3))
+    print(str(number4))
+    print(str(number5))
+else:
+    print("Incorrect, the smallest variable was acutally \nnumber " + answer + "!")
+    print(str(number1))
+    print(str(number2))
+    print(str(number3))
+    print(str(number4))
+    print(str(number5))
